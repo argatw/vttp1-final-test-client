@@ -1,0 +1,52 @@
+<p>create-post here!</p>
+
+<div>
+    <form [formGroup]="regForm" (ngSubmit)="processForm()">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" size="30" formControlName="name">
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                  <input type="text" size="30" formControlName="email">
+                </td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td>
+                  <input type="text" size="30" formControlName="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>Title:</td>
+                <td>
+                  <input type="text" size="30" formControlName="title">
+                </td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>
+                    <input type="text" formControlName="description">
+                </td>
+            </tr>
+            <tr>
+                <td>Image:</td>
+                <td>
+                    <!-- <input type="file" (change)="onSelect($event)" accept=".jpg, .jpeg, .png"> -->
+                    <input type="file" formControlName="image" #toUpload>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" [disabled]="regForm.invalid">
+                        Post!
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

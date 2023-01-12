@@ -1,0 +1,49 @@
+<p>post-details!</p>
+
+<!-- <div *ngFor="let p of postdetails; let i=index">
+    <table>
+        <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.email }}</td>
+            <td>{{ p.phone }}</td>
+            <td>{{ p.title }}</td>
+            <td>{{ p.description }}</td>
+        </tr>
+    </table>
+    [<code>{{ o.key }}</code>] - <span>{{ o.value.name }}</span>
+</div> -->
+
+<table>
+    <th>
+        <img src={{postDetails.image}}>
+    </th>
+    <tr>
+        <td>Posting Id: {{postDetails.posting_id}}</td>
+    </tr>
+    <tr>
+        <td>Posting Date: {{postDetails.posting_date}}</td>
+    </tr>
+    <tr>
+        <td>Name: {{postDetails.name}}</td>
+    </tr>
+    <tr>
+        <td>Email: {{postDetails.email}}</td>
+    </tr>
+    <tr>
+        <td>Phone: {{postDetails.phone}}</td>
+    </tr>
+    <tr>
+        <td>Title: {{postDetails.title}}</td>
+    </tr>
+    <tr>
+        <td>Description: {{postDetails.description}}</td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" (click)="return()">Cancel</button>
+        </td>
+        <td>
+            <button type="button" (click)="confirm()">Confirm</button>
+        </td>
+    </tr>
+</table>
